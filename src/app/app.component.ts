@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   estilo :string = 'GRID';
   datos :any[] = [
     {
@@ -32,7 +33,7 @@ export class AppComponent {
       "familia": "AMORTIGUADORES SUSPENSION",
       "lote": "1",
       "fecha_sincronizacion": "2021-08-05 14:48:30",
-      "imagen_producto": "https://digital-assets.tecalliance.services/images/800/e2b5be389de011fd261157c95d6a5116ddfaafff.jpg"
+      "imagen_producto": "https://digital-assets.tecalliance.services/images/800/bc01e98d36fdf08ef78cf7c6f396cd192f3e4f81.jpg"
     },
     {
       "id": "90067",
@@ -191,13 +192,13 @@ export class AppComponent {
       "imagen_producto": "https://static.catalogorecambios.com/img/productos-custom/RYM/RYMJT1858_01.jpg"
     }
   ];
+  productoSeleccionado :any = this.datos[0];
 
-  cambiaEstilo():void{
-    if(this.estilo==='FLEX'){
-      this.estilo='GRID';
-    }
-    else {
-      this.estilo='FLEX';
-    }
+  cambioEstilo(event :string){
+    this.estilo = event
+  }
+  seleccionaProducto(filtro:any){
+    this.productoSeleccionado = this.datos[filtro];
+
   }
 }
