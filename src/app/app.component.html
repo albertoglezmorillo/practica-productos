@@ -1,7 +1,6 @@
 <div class="contenedor-principal" [ngClass]="{'contenedor-principal-flex':estilo==='FLEX','contenedor-principal-grid':estilo==='GRID'}">
   <div class="contenedor-cabecera">
     <div>CABECERA</div>
-    <div class="btn btn-sm btn-light" (click)="cambiaDatos()">{{bandera?'DATOS SI':'DATOS NO'}}</div>
     <div class="btn btn-sm btn-light" (click)="cambiaEstilo()">{{estilo}}</div>
   </div>
   <div class="contenedor-necesario-para-flex">
