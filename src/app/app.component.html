@@ -1,0 +1,29 @@
+<div class="contenedor-principal" [ngClass]="{'contenedor-principal-flex':estilo==='FLEX','contenedor-principal-grid':estilo==='GRID'}">
+  <div class="contenedor-cabecera">
+    <div>CABECERA</div>
+    <div class="btn btn-sm btn-light" (click)="cambiaDatos()">{{bandera?'DATOS SI':'DATOS NO'}}</div>
+    <div class="btn btn-sm btn-light" (click)="cambiaEstilo()">{{estilo}}</div>
+  </div>
+  <div class="contenedor-necesario-para-flex">
+    <div class="contenedor-filtros">
+      <div class="box-tipico-con-colores-traslucidos">
+        <h4 *ngFor="let item of datos">FILTRO {{item}}</h4>
+      </div>
+    </div>
+    <div class="contenedor-tabla">
+      <div class="parte-arriba">
+        <div class="box-tipico-con-colores-traslucidos">
+          <h1 *ngFor="let item of datos">DATO {{item}}</h1>
+        </div>
+      </div>
+      <div class="parte-abajo">
+        <div class="box-tipico-con-colores-traslucidos">
+          <h3 *ngFor="let item of datos">DATO {{item}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contenedor-pie">
+
+  </div>
+</div>
