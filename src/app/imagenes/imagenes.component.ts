@@ -190,7 +190,7 @@ export class ImagenesComponent implements OnInit {
       "imagen_producto": "https://static.catalogorecambios.com/img/productos-custom/RYM/RYMJT1858_01.jpg"
     }
   ];
-  productoSeleccionado :any = this.datos[0];
+  productoseleccionado :any = this.datos[0];
 
   constructor() { }
 
