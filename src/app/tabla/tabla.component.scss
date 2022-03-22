@@ -9,8 +9,9 @@
             height: 100%;
             overflow-y: auto;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 200px;
+            .imagen {
+                height: 100px;
+            }
         }
     }
 }
