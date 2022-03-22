@@ -192,6 +192,23 @@ export class FiltroComponent {
     }
   ];
 
+  campoQueNosVaAServirABuscar:string = 'id';
   
 
+  cambiamosValor(event: any){
+    this.campoQueNosVaAServirABuscar = event.target.value;
+  }
+
+  muestraValor(objeto:any) :string{
+    switch(this.campoQueNosVaAServirABuscar){
+      case 'id':
+        return objeto.id;
+      case 'marca_codigo':
+        return objeto.marca_codigo;
+      case 'referencia':
+        return objeto.referencia;
+      default:
+        return '¿?';
+    }
+  }
 }

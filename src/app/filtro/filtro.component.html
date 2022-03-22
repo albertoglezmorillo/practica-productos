@@ -1,9 +1,14 @@
 <div class="contenedor-de-filtro">
   <div class="box-tipico-con-colores-traslucidos">
-    <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index">
+    <select class="form-select" aria-label="Default select example" name="select-busqueda" (change)="cambiamosValor($event)">
+      <option value= "id" >ID</option>
+      <option value="marca_codigo" >Codigo</option>
+      <option value="referencia"  >Referencia</option>
+    </select>
+    <button class="linea-productobtn btn-secondary btn-lg btn-block" *ngFor="let item of datos;let posicionEnJson = index" >
       <img src="{{item.marca_logo}}" height="20px" />
-      <h4 class="m-0">{{item.referencia}}</h4>
-    </div>
+      <h4 class="m-0" id="escribe-aqui">{{muestraValor(item)}}</h4> 
+    </button>
   </div>
   
 

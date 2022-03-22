@@ -1,1 +1,16 @@
+.contenedor-de-filtro{
+    .box-tipico-con-colores-traslucidos{
+        select{
+            margin-bottom: 10px;
+        }
+        button{
+          
+    position: static;
+    bottom: 20px;
+    height: 100px;
+    width: 150px;
+    border: 1px solid #000;
 
+        }
+    }
+}
