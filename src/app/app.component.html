@@ -2,78 +2,14 @@
     <app-cabecera class="contenedor-cabecera" (respuestaEstilo)="cambioEstilo($event)">
     </app-cabecera>
     <div class="contenedor-necesario-para-flex">
-        <div class="contenedor-filtros">
-            <div class="box-tipico-con-colores-traslucidos">
-                <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index" (click)="seleccionaProducto(posicionEnJson)">
-                    <img src="{{item.marca_logo}}" height="20px" />
-                    <h4 class="m-0">{{item.referencia}}</h4>
-                </div>
-            </div>
-        </div>
+        <app-filtro class="contenedor-filtros"></app-filtro>
         <div class="contenedor-tabla">
             <app-tabla></app-tabla>
-            <!-- <div class="parte-arriba">
-                <div class="box-tipico-con-colores-traslucidos">
-                    <div class="ficha-producto">
-                        <div class="marca">
-                            <label>MARCA:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.marca_nombre}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="marca-codigo">
-                            <label>CODIGO:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.marca_codigo}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="referencia">
-                            <label>REFERENCIA:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.referencia}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="pack">
-                            <label>PACK:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="x{{productoSeleccionado.lote}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="seccion">
-                            <label>SECCION:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.seccion}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="familia">
-                            <label>FAMILIA:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.familia}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="fecha-sincro">
-                            <label>ULTIMA ACT.:</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" type="text" value="{{productoSeleccionado.fecha_sincronizacion}}" readonly/>
-                            </div>
-                        </div>
-                        <div class="imagen">
-                            <img src="{{productoSeleccionado.imagen_producto}}" width="100%" height="auto" />
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="parte-abajo">
-                <div class="box-tipico-con-colores-traslucidos">
-                    <div class="contenido">
-                        <img src="{{productoSeleccionado.marca_logo}}" height="80px" />
-                        <h1>{{productoSeleccionado.descripcion}}</h1>
-                    </div>
-                </div>
+                <app-imagenes></app-imagenes>
             </div>
         </div>
     </div>
     <div class="contenedor-pie">
-
     </div>
 </div>
