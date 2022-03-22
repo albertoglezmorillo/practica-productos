@@ -2,14 +2,15 @@
   <app-cabecera class="contenedor-cabecera" (respuestaEstilo)="cambioEstilo($event)">
   </app-cabecera>
   <div class="contenedor-necesario-para-flex">
-    <div class="contenedor-filtros">
+   <!-- <div class="contenedor-filtros">
       <div class="box-tipico-con-colores-traslucidos">
         <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index" (click)="seleccionaProducto(posicionEnJson)">
           <img src="{{item.marca_logo}}" height="20px" />
           <h4 class="m-0">{{item.referencia}}</h4>
         </div>
       </div>
-    </div>
+    </div>-->
+    <app-filtro class="contenedor-filtros"></app-filtro>
     <div class="contenedor-tabla">
       <div class="parte-arriba">
         <div class="box-tipico-con-colores-traslucidos">
