@@ -1,0 +1,11 @@
+.contenedor-necesario-para-flex{
+    background-color: blue;
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    .contenedor-filtros{
+      background-color: green;
+      flex:auto;
+    }
+}
