@@ -1,183 +1,176 @@
-.box-tipico-con-colores-traslucidos{
-  height: 100%;
-  background-color: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10);
-  border-radius: 10px;
-  overflow-y: auto;
+.box-tipico-con-colores-traslucidos {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10);
+    border-radius: 10px;
+    overflow-y: auto;
 }
 
 //** DISPLAY FLEX **//
-
-.contenedor-principal-flex{
-  display: flex;
-  flex-direction: column;
-  .contenedor-cabecera{
-    background-color: yellow;
-    flex: auto;
-  }
-  .contenedor-necesario-para-flex{
-    background-color: blue;
-    flex: 1;
-
+.contenedor-principal-flex {
     display: flex;
-    flex-direction: row;
-    .contenedor-filtros{
-      background-color: green;
-      flex:auto;
+    flex-direction: column;
+    .contenedor-cabecera {
+        background-color: yellow;
+        flex: auto;
     }
-    .contenedor-tabla{
-      background-color: blueviolet;
-      flex: 1;
+    .contenedor-necesario-para-flex {
+        background-color: blue;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        .contenedor-filtros {
+            background-color: green;
+            flex: auto;
+        }
+        .contenedor-tabla {
+            background-color: blueviolet;
+            flex: 1;
+        }
     }
-  }
-  .contenedor-pie{
-    flex: auto;
-  }
+    .contenedor-pie {
+        flex: auto;
+    }
 }
 
 //** DISPLAY GRID **//
-
-.contenedor-principal-grid{
-  background-color: darkslateblue;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  .contenedor-cabecera{
-    background-color: darkcyan;
-  }
-  .contenedor-necesario-para-flex{
+.contenedor-principal-grid {
+    background-color: darkslateblue;
     display: grid;
-    grid-template-columns: auto 1fr;
-  }
-  .contenedor-pie{
-    background-color: antiquewhite;
-  }
+    grid-template-rows: auto 1fr auto;
+    .contenedor-cabecera {
+        background-color: darkcyan;
+    }
+    .contenedor-necesario-para-flex {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .contenedor-pie {
+        background-color: antiquewhite;
+    }
 }
 
 //** COMUNES **//
-
-.contenedor-principal{
-  height: 100vh;
-
-  .contenedor-cabecera{
-    height: 50px;
-    max-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .contenedor-necesario-para-flex{
-    height: 100%;
-    overflow-y: hidden;
-    .contenedor-filtros{
-      height: 100%;
-      width: 20rem;
-      max-width: 20rem;
-      overflow-y: hidden;
-      padding: 10px;
-      .box-tipico-con-colores-traslucidos{
-        padding: 5px;
-        .linea-producto{
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          margin: 5px 0px;
-          &:hover{
-            img{
-              filter: drop-shadow(0px 0px 1px #FFFFFF);
-            }
-            background-color: darkslateblue;
-            color: whitesmoke;
-            cursor: pointer;
-          }
-        }
-      }
+.contenedor-principal {
+    height: 100vh;
+    .contenedor-cabecera {
+        height: 50px;
+        max-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
-    .contenedor-tabla{
-      height: 100%;
-      overflow-y: hidden;
-      display: grid;
-      grid-template-rows: 6fr 4fr;
-      padding: 10px;
-      gap: 10px;
-      .parte-arriba{
+    .contenedor-necesario-para-flex {
         height: 100%;
         overflow-y: hidden;
-        .box-tipico-con-colores-traslucidos{
-          height: 100%;
-          overflow-y: hidden;
-          padding: 10px;
-          .ficha-producto{
+        .contenedor-filtros {
             height: 100%;
-            overflow-y: auto;
+            width: 20rem;
+            max-width: 20rem;
+            overflow-y: hidden;
+            padding: 10px;
+            .box-tipico-con-colores-traslucidos {
+                padding: 5px;
+                .linea-producto {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 5px 0px;
+                    &:hover {
+                        img {
+                            filter: drop-shadow(0px 0px 1px #FFFFFF);
+                        }
+                        background-color: darkslateblue;
+                        color: whitesmoke;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .contenedor-tabla {
+            height: 100%;
+            overflow-y: hidden;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 300px;
-            grid-template-areas: "marca marca-codigo imagen" "referencia pack imagen" "seccion familia imagen" "fecha fecha imagen";
-            >*{
-              padding: 0.2rem;
+            grid-template-rows: 6fr 4fr;
+            padding: 10px;
+            gap: 10px;
+            .parte-arriba {
+                height: 100%;
+                overflow-y: hidden;
+                .box-tipico-con-colores-traslucidos {
+                    height: 100%;
+                    overflow-y: hidden;
+                    padding: 10px;
+                    .ficha-producto {
+                        height: 100%;
+                        overflow-y: auto;
+                        display: grid;
+                        grid-template-rows: 1fr 1fr 1fr 1fr;
+                        grid-template-columns: 1fr 1fr 300px;
+                        grid-template-areas: "marca marca-codigo imagen" "referencia pack imagen" "seccion familia imagen" "fecha fecha imagen";
+                        >* {
+                            padding: 0.2rem;
+                        }
+                        label {
+                            font-family: monospace;
+                            font-weight: bold;
+                            font-size: 1rem;
+                        }
+                        .marca {
+                            grid-area: marca;
+                        }
+                        .marca-codigo {
+                            grid-area: marca-codigo;
+                        }
+                        .referencia {
+                            grid-area: referencia;
+                        }
+                        .pack {
+                            grid-area: pack;
+                        }
+                        .seccion {
+                            grid-area: seccion;
+                        }
+                        .familia {
+                            grid-area: familia;
+                        }
+                        .fecha-sincro {
+                            grid-area: fecha;
+                        }
+                        .imagen {
+                            grid-area: imagen;
+                            background-color: #FFFFFF;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px;
+                            height: 100%;
+                            overflow-y: auto;
+                        }
+                    }
+                }
             }
-            label{
-              font-family: monospace;
-              font-weight: bold;
-              font-size: 1rem;
+            .parte-abajo {
+                height: 100%;
+                overflow-y: auto;
+                .box-tipico-con-colores-traslucidos {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    .contenido {
+                        height: auto;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                }
             }
-            .marca{
-              grid-area: marca;
-            }
-            .marca-codigo{
-              grid-area: marca-codigo;
-            }
-            .referencia{
-              grid-area: referencia;
-            }
-            .pack{
-              grid-area: pack;
-            }
-            .seccion{
-              grid-area: seccion;
-            }
-            .familia{
-              grid-area: familia;
-            }
-            .fecha-sincro{
-              grid-area: fecha;
-            }
-            .imagen{
-              grid-area: imagen;
-              background-color: #FFFFFF;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 10px;
-              height: 100%;
-              overflow-y: auto;
-            }
-          }
         }
-      }
-      .parte-abajo{
-        height: 100%;
-        overflow-y: auto;
-        .box-tipico-con-colores-traslucidos{
-          display: flex;
-          align-items: center;
-          padding: 20px;
-          .contenido{
-            height: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-          }
-        }
-      }
     }
-  }
-
-  .contenedor-pie{
-    height: 20px;
-    max-height: 20px;
-  }
+    .contenedor-pie {
+        height: 20px;
+        max-height: 20px;
+    }
 }

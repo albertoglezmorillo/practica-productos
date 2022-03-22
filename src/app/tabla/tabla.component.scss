@@ -1,0 +1,17 @@
+.contenedor-tabla {
+    height: 100%;
+    overflow-y: hidden;
+    .box-tipico-con-colores-traslucidos {
+        height: 100%;
+        overflow-y: hidden;
+        padding: 10px;
+        .ficha-producto {
+            height: 100%;
+            overflow-y: auto;
+            display: grid;
+            .imagen {
+                height: 100px;
+            }
+        }
+    }
+}

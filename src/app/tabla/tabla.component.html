@@ -1,0 +1,51 @@
+<div class="contenedor-tabla">
+    <div class="box-tipico-con-colores-traslucidos">
+        <div class="ficha-producto">
+            <div class="marca">
+                <label>MARCA:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.marca_nombre}}" readonly/>
+                </div>
+            </div>
+            <div class="marca-codigo">
+                <label>CODIGO:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.marca_codigo}}" readonly/>
+                </div>
+            </div>
+            <div class="referencia">
+                <label>REFERENCIA:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.referencia}}" readonly/>
+                </div>
+            </div>
+            <div class="pack">
+                <label>PACK:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="x{{producto.lote}}" readonly/>
+                </div>
+            </div>
+            <div class="seccion">
+                <label>SECCION:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.seccion}}" readonly/>
+                </div>
+            </div>
+            <div class="familia">
+                <label>FAMILIA:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.familia}}" readonly/>
+                </div>
+            </div>
+            <div class="fecha-sincro">
+                <label>ULTIMA ACT.:</label>
+                <div class="input-group">
+                    <input class="form-control form-control-sm" type="text" value="{{producto.fecha_sincronizacion}}" readonly/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="{{producto.imagen_producto}}" width="100%" height="auto" />
+            </div>
+        </div>
+    </div>
+</div>
