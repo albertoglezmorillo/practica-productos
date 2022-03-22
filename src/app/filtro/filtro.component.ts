@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-filtro',
   templateUrl: './filtro.component.html',
   styleUrls: ['./filtro.component.scss']
 })
-export class FiltroComponent {
+export class FiltroComponent implements OnInit{
 
   datos :any[] = [
     {
@@ -191,14 +191,17 @@ export class FiltroComponent {
       "imagen_producto": "https://static.catalogorecambios.com/img/productos-custom/RYM/RYMJT1858_01.jpg"
     }
   ];
-
   campoQueNosVaAServirABuscar:string = 'id';
-  
+
+  @Output() productoSelecionadoRespuesta : EventEmitter<any> = new EventEmitter;
+
+  ngOnInit(): void {
+    this.productoSelecionadoRespuesta.emit(this.datos[0]);
+  }
 
   cambiamosValor(event: any){
     this.campoQueNosVaAServirABuscar = event.target.value;
   }
-
   muestraValor(objeto:any) :string{
     switch(this.campoQueNosVaAServirABuscar){
       case 'id':
@@ -210,5 +213,8 @@ export class FiltroComponent {
       default:
         return '¿?';
     }
+  }
+  seleccionamosProductoEnFiltro(index:number){
+    this.productoSelecionadoRespuesta.emit(this.datos[index]);
   }
 }

@@ -1,16 +1,32 @@
 .contenedor-de-filtro{
-    .box-tipico-con-colores-traslucidos{
-        select{
-            margin-bottom: 10px;
-        }
-        button{
-          
-    position: static;
-    bottom: 20px;
-    height: 100px;
-    width: 150px;
-    border: 1px solid #000;
-
-        }
+  height: 100%;
+  overflow-y: hidden;
+  .box-tipico-con-colores-traslucidos{
+    height: 100%;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    .contenedor-select{
+      select{
+        margin-bottom: 10px;
+      }
     }
+    .contenedor-botones{
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      button{
+        position: static;
+        height: 100px;
+        width: 45%;
+        border: 1px solid #000;
+      }
+    }
+
+  }
 }

@@ -2,13 +2,13 @@
     <app-cabecera class="contenedor-cabecera" (respuestaEstilo)="cambioEstilo($event)">
     </app-cabecera>
     <div class="contenedor-necesario-para-flex">
-        <app-filtro class="contenedor-filtros"></app-filtro>
+        <app-filtro class="contenedor-filtros" (productoSelecionadoRespuesta)="seleccionaProducto($event)"></app-filtro>
         <div class="contenedor-tabla">
             <div class="parte-arriba">
-                <app-tabla></app-tabla>
+                <app-tabla [productoSeleccionadoPadre2]="productoSeleccionado"></app-tabla>
             </div>
             <div class="parte-abajo">
-                <app-imagenes></app-imagenes>
+                <app-imagenes [productoseleccionadoDelPadre]="productoSeleccionado"></app-imagenes>
             </div>
         </div>
     </div>
