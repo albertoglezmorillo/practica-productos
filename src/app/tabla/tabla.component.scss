@@ -4,13 +4,18 @@
     .box-tipico-con-colores-traslucidos {
         height: 100%;
         overflow-y: hidden;
-        padding: 10px;
+        
         .ficha-producto {
             height: 100%;
             overflow-y: auto;
             display: grid;
+            grid-template-columns: 1fr 1fr 1fr 200px;
             grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 200px;
+            
         }
     }
+}
+.imagen{
+    height: 100%;
+    width: 10px;
 }
