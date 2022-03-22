@@ -1,8 +1,22 @@
-<div class="contenedor-filtros">
+<div class="contenedor-de-filtro">
+  <div class="box-tipico-con-colores-traslucidos">
+    <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index">
+      <img src="{{item.marca_logo}}" height="20px" />
+      <h4 class="m-0">{{item.referencia}}</h4>
+    </div>
+  </div>
+  
+
+</div>
+
+
+
+<!--<div class="contenedor-filtros">
     <div class="box-tipico-con-colores-traslucidos">
-      <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index" >
+      <div class="linea-producto" *ngFor="let item of datos;let posicionEnJson = index">
         <img src="{{item.marca_logo}}" height="20px" />
         <h4 class="m-0">{{item.referencia}}</h4>
       </div>
     </div>
-  </div>
+  </div>-->
+  
