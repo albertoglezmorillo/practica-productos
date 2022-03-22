@@ -199,6 +199,5 @@ export class AppComponent {
   }
   seleccionaProducto(filtro:any){
     this.productoSeleccionado = this.datos[filtro];
-
   }
 }
