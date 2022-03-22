@@ -1,17 +1,20 @@
 .contenido-imagenes {
-        height: auto;
-        background-color: red;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-      
+  border-radius: 20px;
+  background-color: white;
+  overflow-y: auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 20px;
+  .div-necesario-para-orden {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 .imagen-producto {
-  background-color: aqua;
-}
-.descripcion-producto {
-  text-align: center;
-  background-color: yellow;
+  height: 200px;
+  width: 200px;
 }
